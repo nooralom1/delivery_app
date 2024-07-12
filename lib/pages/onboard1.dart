@@ -61,9 +61,9 @@ class Onboard1 extends StatelessWidget {
                       height: 50,
                       width: 150,
                       child: CustomELBTN(
-                        bgcolor: Color(0xfffad4e7),
+                        bgcolor: const Color(0xfffad4e7),
                         btname: ("Skip"),
-                        textcolor: Color(NColor.orangeColor),
+                        textcolor: const Color(NColor.orangeColor),
                         fontsize: 18,
                         onPressed: (){
                           Navigator.push(
@@ -73,18 +73,23 @@ class Onboard1 extends StatelessWidget {
                         },
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     SizedBox(
                       height: 50,
                       width: 150,
                       child: CustomELBTN(
-                        bgcolor: Color(NColor.orangeColor),
+                        bgcolor: const Color(NColor.orangeColor),
                         btname: ("Continue"),
                         textcolor: Colors.white,
                         fontsize: 18,
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LogInPage()));
+                        },
                       ),
                     ),
                   ],
