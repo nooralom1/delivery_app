@@ -2,11 +2,21 @@ import 'package:delyvery_app/common/color.dart';
 import 'package:delyvery_app/common/widgets/custom_container.dart';
 import 'package:delyvery_app/common/widgets/custom_eluvated_btn.dart';
 import 'package:delyvery_app/common/widgets/customcard.dart';
+import 'package:delyvery_app/pages/parcel.dart';
+import 'package:delyvery_app/pages/payment.dart';
+import 'package:delyvery_app/pages/profile.dart';
 import 'package:flutter/material.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-class DashBoard extends StatelessWidget {
+class DashBoard extends StatefulWidget {
   const DashBoard({super.key});
 
+  @override
+  State<DashBoard> createState() => _DashBoardState();
+}
+
+class _DashBoardState extends State<DashBoard> {
+  var _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -262,18 +272,58 @@ class DashBoard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: SalomonBottomBar(
+        currentIndex: _currentIndex,
+        onTap: (i) => setState(() => _currentIndex = i),
         items: [
-         BottomNavigationBarItem(
-             icon:   Icon(Icons.grid_view,color: Colors.red,),
-           label: "Dashboard"
-         ),
-         BottomNavigationBarItem(
-             icon:   Icon(Icons.grid_view,color: Colors.red,),
-         ),
-         BottomNavigationBarItem(
-             icon:   Icon(Icons.grid_view,color: Colors.red,),
-         ),
+          SalomonBottomBarItem(
+            icon: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DashBoard()));
+                },
+                child: Icon(Icons.grid_view)),
+            title: Text("Dashboard"),
+            selectedColor: Color(0xffEF232F),
+          ),
+          SalomonBottomBarItem(
+            icon: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PaymentPage()));
+                },
+                child: Image.asset("asset/images/dollar-square.png")),
+            title: Text("Payment"),
+            selectedColor: Color(0xffEF232F),
+          ),
+          SalomonBottomBarItem(
+            icon: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ParcelPage()));
+                },
+                child: Image.asset("asset/images/mouse-square.png")),
+            title: Text("Parcel"),
+            selectedColor: Color(0xffEF232F),
+          ),
+          SalomonBottomBarItem(
+            icon: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfilePage()));
+                },
+                child: Icon(Icons.person_outline_sharp)),
+            title: Text("Profile"),
+            selectedColor: Color(0xffEF232F),
+          ),
         ],
       ),
     );
