@@ -2,11 +2,7 @@ import 'package:delyvery_app/common/color.dart';
 import 'package:delyvery_app/common/widgets/custom_container.dart';
 import 'package:delyvery_app/common/widgets/custom_eluvated_btn.dart';
 import 'package:delyvery_app/common/widgets/customcard.dart';
-import 'package:delyvery_app/pages/parcel.dart';
-import 'package:delyvery_app/pages/payment.dart';
-import 'package:delyvery_app/pages/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({super.key});
@@ -16,7 +12,6 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
-  var _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -30,7 +25,7 @@ class _DashBoardState extends State<DashBoard> {
               children: [
                 Container(
                   height: height * 0.22,
-                  color: Color(NColor.blackColor),
+                  color: const Color(NColor.blackColor),
                   child: Padding(
                     padding: const EdgeInsets.only(bottom: 60),
                     child: Row(
@@ -45,8 +40,8 @@ class _DashBoardState extends State<DashBoard> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 30, left: 10),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 30, left: 10),
                               child: Column(
                                 children: [
                                   Text(
@@ -66,7 +61,7 @@ class _DashBoardState extends State<DashBoard> {
                             ),
                           ],
                         ),
-                        Icon(
+                        const Icon(
                           Icons.notification_important_outlined,
                           color: Color(0xffF89E02),
                           size: 35,
@@ -87,12 +82,12 @@ class _DashBoardState extends State<DashBoard> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Total Earning",
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Row(
@@ -101,11 +96,11 @@ class _DashBoardState extends State<DashBoard> {
                               Column(
                                 children: [
                                   Image.asset("asset/images/dollar-square.png"),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Earning"),
-                                  Text(
+                                  const Text("Earning"),
+                                  const Text(
                                     "\$625.48",
                                     style: TextStyle(
                                         color: Color(NColor.moneyColor),
@@ -118,11 +113,11 @@ class _DashBoardState extends State<DashBoard> {
                                 children: [
                                   Image.asset(
                                       "asset/images/percentage-square.png"),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Collection"),
-                                  Text(
+                                  const Text("Collection"),
+                                  const Text(
                                     "\$6225.48",
                                     style: TextStyle(
                                         color: Color(NColor.moneyColor),
@@ -134,11 +129,11 @@ class _DashBoardState extends State<DashBoard> {
                               Column(
                                 children: [
                                   Image.asset("asset/images/wallet.png"),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Balance"),
-                                  Text(
+                                  const Text("Balance"),
+                                  const Text(
                                     "\$1254.89",
                                     style: TextStyle(
                                         color: Color(NColor.moneyColor),
@@ -156,11 +151,11 @@ class _DashBoardState extends State<DashBoard> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 80,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 18, right: 22),
+            const Padding(
+              padding: EdgeInsets.only(left: 18, right: 22),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -179,11 +174,11 @@ class _DashBoardState extends State<DashBoard> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 13),
+            const Padding(
+              padding: EdgeInsets.only(left: 13),
               child: Row(
                 children: [
                   CustomContainer(
@@ -206,11 +201,11 @@ class _DashBoardState extends State<DashBoard> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 13),
+            const Padding(
+              padding: EdgeInsets.only(left: 13),
               child: Row(
                 children: [
                   CustomContainer(
@@ -233,11 +228,11 @@ class _DashBoardState extends State<DashBoard> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 18, right: 22),
+            const Padding(
+              padding: EdgeInsets.only(left: 18, right: 22),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -256,75 +251,21 @@ class _DashBoardState extends State<DashBoard> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            CustomCard(
+            const CustomCard(
                 image: "asset/images/Rectangle 814225.png",
                 text1: "Exclusive Cotton Fiber Head Pillow",
                 text2: "Size: 34”, Weight: 2.5K",
                 text3: "\$1254.89"),
-            CustomCard(
+            const CustomCard(
                 image: "asset/images/Rectangle 2.png",
                 text1: "Exclusive Cotton Fiber Head Pillow",
                 text2: "Size: 34”, Weight: 2.5K",
                 text3: "\$1254.89"),
           ],
         ),
-      ),
-      bottomNavigationBar: SalomonBottomBar(
-        currentIndex: _currentIndex,
-        onTap: (i) => setState(() => _currentIndex = i),
-        items: [
-          SalomonBottomBarItem(
-            icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const DashBoard()));
-                },
-                child: Icon(Icons.grid_view)),
-            title: Text("Dashboard"),
-            selectedColor: Color(0xffEF232F),
-          ),
-          SalomonBottomBarItem(
-            icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const PaymentPage()));
-                },
-                child: Image.asset("asset/images/dollar-square.png")),
-            title: Text("Payment"),
-            selectedColor: Color(0xffEF232F),
-          ),
-          SalomonBottomBarItem(
-            icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ParcelPage()));
-                },
-                child: Image.asset("asset/images/mouse-square.png")),
-            title: Text("Parcel"),
-            selectedColor: Color(0xffEF232F),
-          ),
-          SalomonBottomBarItem(
-            icon: InkWell(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ProfilePage()));
-                },
-                child: Icon(Icons.person_outline_sharp)),
-            title: Text("Profile"),
-            selectedColor: Color(0xffEF232F),
-          ),
-        ],
       ),
     );
   }

@@ -1,7 +1,4 @@
-import 'package:delyvery_app/pages/authentication/login.dart';
-import 'package:delyvery_app/pages/dashboard.dart';
-import 'package:delyvery_app/pages/onboard1.dart';
-import 'package:delyvery_app/pages/splash.dart';
+import 'package:delyvery_app/bottombar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(),
+      home:  Bottombar(),
     );
   }
 }

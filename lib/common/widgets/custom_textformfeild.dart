@@ -15,14 +15,14 @@ class CustomTextFormField extends StatelessWidget {
       width: 320,
       child: TextFormField(
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
               borderSide:
               BorderSide(width: 2, color: Color(0xffECEDF0))),
           hintText: heinTex,
           labelText: labelText,
           suffixIcon: Icon(
             suffixIcon,
-            color: Color(0xffAAAEBE),
+            color: const Color(0xffAAAEBE),
           ),
         ),
       ),

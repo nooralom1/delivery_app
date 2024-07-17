@@ -2,7 +2,6 @@ import 'package:delyvery_app/common/color.dart';
 import 'package:delyvery_app/common/icon.dart';
 import 'package:delyvery_app/common/widgets/custom_eluvated_btn.dart';
 import 'package:delyvery_app/common/widgets/custom_textformfeild.dart';
-import 'package:delyvery_app/pages/dashboard.dart';
 import 'package:delyvery_app/pages/home.dart';
 import 'package:flutter/material.dart';
 
